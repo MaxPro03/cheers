@@ -7,6 +7,35 @@ h6{
     font-family: "Montserrat-Black";
 }
 
+li{
+    list-style-type: none;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: lightseagreen;
+}
+
+@media only screen and (max-width: 992px) {
+    body {
+      background-color: lightgreen;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+      background-color: lightblue;
+    }
+}
+
+/* @media only screen and (max-width: 576px) { */
+    
+/* } */
+
 /*---------------------------- FONTS ----------------------------*/
 
 /* FONT INTER MEDIUM */
