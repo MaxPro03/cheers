@@ -1,10 +1,42 @@
+body{
+    position: relative;
+    font-family: "Grandis";
+}
+
+:root{
+    /* BG */
+    --green-bg: #36954F;
+    --red-bg: #FF2C32;
+    --yellow-bg: #FFF212;
+    --blue-bg: #F1EFFA;
+    --white-bg: #FFFFFF;
+
+    /* TEXT-COLOR */
+    --btn-text-color: #101010;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
 h6{
-    font-family: "Montserrat-Black";
+    font-family: "Grandis";
+    font-weight: 900;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--btn-text-color);
 }
 
 li{
@@ -16,19 +48,481 @@ ul{
     padding: 0;
 }
 
-header{
-    background-color: lightseagreen;
+.link-btn{
+    display: flex;
+    align-items: center;
+    border-radius: 14px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0px 24px;
+    height: 56px;
+    color: var(--btn-text-color);
+    line-height: 21px;
+    justify-content: center;
+
 }
 
-@media only screen and (max-width: 992px) {
-    body {
-      background-color: lightgreen;
+/*.link-btn svg{*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    right: 20px;*/
+/*}*/
+
+.bg-yellow{
+    background-color: var(--yellow-bg);
+}
+
+.bg-white{
+    background-color: var(--white-bg);
+}
+
+.bg-green{
+    background-color: var(--green-bg);
+}
+
+.bg-blue{
+    background-color: var(--blue-bg);
+}
+
+.bg-red{
+    background-color: var(--red-bg);
+}
+
+.wrapper{
+    height: 100vh;
+}
+
+.text-in-bg{
+    position: relative;
+}
+
+.text-on-text{
+    position: absolute;
+    bottom: 0;
+    left: 12.8%;
+    text-transform: uppercase;
+    background-color: var(--red-bg);
+    font-size: 40px;
+    padding: 11px 34px 10px;
+    border-radius: 50px;
+    transform: rotate(4deg);
+    line-height: 46px;
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+}
+
+/* HEADER */
+header{
+    background-color: var(--green-bg);
+    height: 90px;
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-nav ul{
+    display: flex;
+    align-items: center;
+}
+
+.header-nav ul li{
+    margin-right: 32px;
+}
+
+.header-nav ul li:last-child{
+    margin-right: 0px;
+}
+
+.header-nav ul li a{
+    font-size: 14px;
+}
+
+.header-contact ul{
+    display: flex;
+    align-items: center;
+}
+
+/* switch-lang */
+
+.switch {
+    position: relative; 
+}
+  
+.switch > span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 50%;
+    text-align: center;
+    font-weight: 500;
+}
+  
+input.check-toggle-round-flat:checked ~ .uz {
+    color: #101010;
+    transition: 0.2s;
+}
+
+input.check-toggle-round-flat:checked ~ .ru {
+    color: #FFFFFF;
+}
+  
+.switch > span.ru {
+    left: 0;
+    padding-left: 2px;
+    color: #101010;
+}
+  
+.switch > span.uz {
+    right: 0;
+    padding-right: 4px;
+    color: #FFFFFF;
+}
+  
+.check-toggle {
+    position: absolute;
+    visibility: hidden;
+}
+
+.check-toggle + label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+input.check-toggle-round-flat + label {
+    padding: 2px;
+    width: 74px;
+    height: 38px;
+    background-color: #55A66A;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+}
+
+input.check-toggle-round-flat + label:before, input.check-toggle-round-flat + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+  
+input.check-toggle-round-flat + label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #55A66A;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+input.check-toggle-round-flat + label:after {
+    top: 2px;
+    left: 3px;
+    bottom: 0px;
+    width: 34px;
+    height: 34px;
+    background-color: var(--yellow-bg);
+    -webkit-border-radius: 52px;
+    -moz-border-radius: 52px;
+    -ms-border-radius: 52px;
+    -o-border-radius: 52px;
+    border-radius: 52px;
+    -webkit-transition: margin 0.2s;
+    -moz-transition: margin 0.2s;
+    -o-transition: margin 0.2s;
+    transition: margin 0.2s;
+}
+  
+input.check-toggle-round-flat:checked + label:after {
+    margin-left: 34px;
+}
+/* HEADER-END */
+
+/* SITE-ON-UPDATE */
+.site-on-update{
+    /*padding-top: 221px;*/
+    /*padding-bottom: 279px;*/
+    /*height: 100vh;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--green-bg);
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.site-on-update_title{
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 56px;
+}
+
+.site-on-update_title h1{
+    font-size: 72px;
+    text-align: center;
+}
+
+.site-on-update_links{
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-on-update_item a svg{
+    margin-left: 8px;
+}
+
+.site-on-update_item{
+    margin-right: 30px;
+}
+
+.site-on-update_item:last-child{
+    margin-right: 0px;
+}
+
+.site-on-update_footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-on-update_footer-img{
+    margin-right: 12px;
+}
+/* SITE-ON-UPDATE-END */
+
+/* MAIN-SLIDER */
+
+.main-slider{
+    position: relative;
+    height: 740px;
+}
+
+.slider-btn-next{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    right: 2%;
+    left: auto;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    background-image: url(../images/arrow-right.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+
+.slider-btn-prev{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 2%;
+    right: auto;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    background-image: url(../images/arrow-left.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+}
+
+.main-slider-title{
+    position: absolute;
+    top: 0;
+    left: 8.5%;
+    z-index: 2;
+    margin-top: 153px;
+}
+
+.main-slider-title h1{
+    font-size: 72px;
+    line-height: 79.2px;
+    white-space: nowrap;
+    color: #101010;
+}
+
+.main-slider-title h1 svg path{
+    fill: #101010;
+}
+
+.main-slider-title h1.text-white svg path{
+    fill: #FFFFFF;
+}
+
+.swiper-slide img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* MAIN-SLIDER-END */
+
+/* FOOTER */
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--green-bg);
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0px 35px 0px;
+}
+
+.copyright span{
+    font-size: 14px;
+    opacity: .6;
+}
+/* FOOTER-END */
+
+/*@media (max-width: 1440px) {*/
+/*    .container{*/
+/*        max-width: 1110px!important;*/
+/*        padding: 0px;*/
+/*    }*/
+/*}*/
+@media (min-width: 768px) and (max-width: 1024px){
+    .site-on-update_title h1{
+        font-size: 64px;
+    }
+
+    .text-on-text{
+        font-size: 36px;
+        padding: 11px 28px 10px;
+        line-height: 46px;
+    }
+
+    .link-btn{
+        width: 324px;
     }
 }
 
-@media only screen and (max-width: 768px) {
-    body {
-      background-color: lightblue;
+
+/* Tablet */
+@media (max-width: 767px) {
+    /*.container{*/
+    /*    max-width: 678px!important;*/
+    /*    padding: 0px;*/
+    /*}*/
+
+    .site-on-update{
+        width: 100%;
+    }
+
+    .text-on-text{
+        font-size: 22px;
+        padding: 11px 18px 10px;
+        line-height: 22px;
+    }
+
+    .site-on-update_title h1{
+        font-size: 40px;
+    }
+
+    .link-btn{
+        width: 100%;
+    }
+
+    .site-on-update_links{
+        display: block;
+    }
+
+    .site-on-update_title{
+        margin-bottom: 59px;
+    }
+
+    .site-on-update_item{
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .site-on-update_item:last-child{
+        margin-bottom: 0px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 320px) {
+    /*.container{*/
+    /*    max-width: 330px!important;*/
+    /*    padding: 0px;*/
+    /*}*/
+
+    .site-on-update{
+        width: 100%;
+    }
+
+    .site-on-update_title h1{
+        font-size: 32px;
+    }
+
+    .site-on-update_title{
+        width: 100%;
+    }
+
+    .text-on-text{
+        font-size: 18px;
+        padding: 6px 16px 4px;
+        line-height: 23px;
+    }
+
+    .link-btn{
+        width: 100%;
+    }
+
+    .site-on-update_links{
+        display: block;
+    }
+
+    .site-on-update_item{
+          margin-right: 0px;
+          margin-bottom: 20px;
+    }
+
+    .site-on-update_item:last-child{
+        margin-bottom: 0px;
     }
 }
 
@@ -40,8 +534,8 @@ header{
 
 /* FONT INTER MEDIUM */
 @font-face {
-    font-family: "Montserrat-Medium";
-    src: url("../fonts/Montserrat-Medium.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-Medium.ttf");
 
     font-weight: 500;
     font-style: normal;
@@ -49,71 +543,89 @@ header{
 
 /* FONT INTER THIN */
 @font-face {
-    font-family: "Montserrat-Thin";
-    src: url("../fonts/Montserrat-Thin.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-Thin.ttf");
 
     font-weight: 100;
     font-style: normal;
 }
 
-/* FONT INTER EXTRALIGHT */
+/* FONT INTER THINITALIC */
 @font-face {
-    font-family: "Montserrat-ExtraLight";
-    src: url("../fonts/Montserrat-ExtraLight.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-ThinItalic.ttf");
 
-    font-weight: 200;
-    font-style: normal;
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* FONT INTER LIGHTITALIC */
+@font-face {
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-LightItalic.ttf");
+
+    font-weight: 300;
+    font-style: italic;
 }
 
 /* FONT INTER LIGHT */
 @font-face {
-    font-family: "Montserrat-Light";
-    src: url("../fonts/Montserrat-Light.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-Light.ttf");
 
     font-weight: 300;
     font-style: normal;
 }
 
+/* FONT INTER REGULARITALIC */
+@font-face {
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-RegularItalic.ttf");
+
+    font-weight: 400;
+    font-style: italic;
+}
+
 /* FONT INTER REGULAR */
 @font-face {
-    font-family: "Montserrat-Regular";
-    src: url("../fonts/Montserrat-Regular.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-Regular.ttf");
 
     font-weight: 400;
     font-style: normal;
 }
 
-/* FONT INTER SEMIBOLD */
+/* FONT INTER BOLDITALIC */
 @font-face {
-    font-family: "Montserrat-SemiBold";
-    src: url("../fonts/Montserrat-SemiBold.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-BoldItalic.ttf");
 
-    font-weight: 600;
-    font-style: normal;
+    font-weight: 700;
+    font-style: italic;
 }
 
 /* FONT INTER BOLD */
 @font-face {
-    font-family: "Montserrat-Bold";
-    src: url("../fonts/Montserrat-Bold.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-Bold.ttf");
 
     font-weight: 700;
     font-style: normal;
 }
 
-/* FONT INTER EXTRABOLD */
+/* FONT INTER BLACKITALIC */
 @font-face {
-    font-family: "Montserrat-Extra-Bold";
-    src: url("../fonts/Montserrat-ExtraBold.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-BlackItalic.ttf");
 
-    font-weight: 800;
-    font-style: normal;
+    font-weight: 900;
+    font-style: italic;
 }
 
 /* FONT INTER BLACK */
 @font-face {
-    font-family: "Montserrat-Black";
-    src: url("../fonts/Montserrat-Black.ttf");
+    font-family: "Grandis";
+    src: url("../fonts/Grandis-Black.ttf");
     font-weight: 900;
     font-style: normal;
 }
