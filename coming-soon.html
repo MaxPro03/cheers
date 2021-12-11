@@ -15,6 +15,43 @@
     <title>Cheers</title>
   </head>
   <body>
+  <div class="modal" 
+      id="contactsModal"
+      tabindex="-1" 
+      aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="info-cards">
+          <div class="info-cards__item bg-red">
+            <div class="info-cards__item-text">
+              <b class="text-white">
+                Узбекистан,<br> г.Ташкент, 100161,<br> Чиланзарский район,<br> ул.Чорбог, д.14
+              </b>
+            </div>
+            <div class="info-cards__item-btn">
+              <a href="#!" class="link-btn bg-white w-100">
+                Показать на карте
+              </a>
+            </div>
+          </div><!-- ./info-cards__item -->
+          <div class="info-cards__item bg-yellow">
+            <div class="info-cards__item-text">
+              <span>
+                с 10:00 до 18:00<br>
+                <b>+998 78 120-07-06</b>
+              </span>
+            </div>
+            <div class="info-cards__item-btn">
+              <a href="#!" class="link-btn bg-white w-100">
+                Позвонить
+              </a>
+            </div>
+          </div><!-- ./info-cards__item -->
+        </div><!-- ./info-card -->
+      </div><!-- ./modal-content -->
+    </div><!-- ./modal-dialog -->
+  </div><!-- ./modal -->
   <div class="wrapper bg-green">
     <header>
       <div class="container">
@@ -44,7 +81,7 @@
             </div><!-- ./site-on-update_title -->
             <div class="site-on-update_links">
               <div class="site-on-update_item">
-                <a class="link-btn bg-yellow" href="#!">
+                <a class="link-btn bg-yellow" href="https://uzbekistan360.uz/ru/location/cheers8bf">
                   Тур по заводу
                   <svg width="29" height="27" viewBox="0 0 29 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M17.1878 21.2562L12.8439 20.1281M17.1878 21.2562L16.0939 25.6281M17.1878 21.2562C3.74589 28.8761 0.665404 23.1774 1.02765 19" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -55,9 +92,9 @@
                     <path d="M19.3156 6.96173C19.3156 6.49797 19.4807 6.11702 19.8109 5.81889C20.141 5.52076 20.5597 5.37169 21.0668 5.37169C21.5739 5.37169 21.9866 5.52076 22.305 5.81889C22.6352 6.10598 22.8003 6.48693 22.8003 6.96173C22.8003 7.44757 22.6352 7.83956 22.305 8.13769C21.9866 8.42478 21.5739 8.56833 21.0668 8.56833C20.5597 8.56833 20.141 8.42478 19.8109 8.13769C19.4807 7.83956 19.3156 7.44757 19.3156 6.96173ZM20.5715 6.51453C20.4536 6.62495 20.3946 6.77402 20.3946 6.96173C20.3946 7.14944 20.4536 7.30403 20.5715 7.42549C20.6894 7.53591 20.8486 7.59112 21.0491 7.59112C21.2496 7.59112 21.4088 7.53591 21.5267 7.42549C21.6446 7.30403 21.7036 7.14944 21.7036 6.96173C21.7036 6.77402 21.6446 6.62495 21.5267 6.51453C21.4088 6.39307 21.2496 6.33234 21.0491 6.33234C20.8486 6.33234 20.6894 6.39307 20.5715 6.51453Z" fill="#101010"/>
                   </svg>
                 </a>
-              </div>
+              </div><!-- site-on-update_item -->
               <div class="site-on-update_item">
-                <a class="link-btn bg-white" href="#!">
+                <a class="link-btn bg-white" type="btn" href="#!" data-bs-toggle="modal" data-bs-target="#contactsModal">
                   Контакты
                   <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1 7H15" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -65,7 +102,7 @@
                     <path d="M9 1L15 7" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </a>
-              </div>
+              </div><!-- site-on-update_item -->
             </div><!-- site-on-update_links -->
           </div><!-- ./container -->
         </div><!-- ./site-on-update -->
@@ -95,12 +132,15 @@
       </div><!-- ./footer -->
     </footer>
   </div><!-- ./wrapper -->
+  
 
 
     <!-- Swiper Script -->
     <script src="./assets/scripts/swiper-bundle.min.js"></script>
     <!-- Bootstrap & Popper -->
     <script src="./assets/scripts/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="./assets/scripts/jquery-3.6.0.min.js"></script>
     <!-- Script -->
     <script src="./assets/scripts/script.js"></script>
 
