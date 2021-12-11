@@ -59,14 +59,11 @@ ul{
     color: var(--btn-text-color);
     line-height: 21px;
     justify-content: center;
-
 }
 
-/*.link-btn svg{*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    right: 20px;*/
-/*}*/
+.link-btn svg{
+    margin-left: 8px;
+}
 
 .bg-yellow{
     background-color: var(--yellow-bg);
@@ -99,13 +96,13 @@ ul{
 .text-on-text{
     position: absolute;
     bottom: 0;
-    left: 12.8%;
+    left: 50%;
     text-transform: uppercase;
     background-color: var(--red-bg);
     font-size: 40px;
     padding: 11px 34px 10px;
     border-radius: 50px;
-    transform: rotate(4deg);
+    transform: rotate(4deg) translateX(-50%);
     line-height: 46px;
     display: flex;
     align-items: flex-start;
@@ -387,10 +384,6 @@ input.check-toggle-round-flat:checked + label:after {
     margin-left: auto;
 }
 
-.site-on-update_item a svg{
-    margin-left: 8px;
-}
-
 .site-on-update_item{
     margin-right: 30px;
 }
@@ -399,13 +392,13 @@ input.check-toggle-round-flat:checked + label:after {
     margin-right: 0px;
 }
 
-.site-on-update_footer{
+.halal-product{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.site-on-update_footer-img{
+.halal-product-img{
     margin-right: 12px;
 }
 /* SITE-ON-UPDATE-END */
@@ -451,7 +444,7 @@ input.check-toggle-round-flat:checked + label:after {
     background-size: 24px;
 }
 
-.main-slider-title{
+.main-slider-text{
     position: absolute;
     top: 0;
     left: 8.5%;
@@ -479,6 +472,19 @@ input.check-toggle-round-flat:checked + label:after {
     bottom: 0;
     right: 0;
     z-index: 2;
+}
+
+.main-slider-links{
+    display: flex;
+    margin-top: 56px;
+}
+
+.main-slider-links .link-btn{
+    margin-right: 30px;
+}
+
+.main-slider-links .link-btn:last-child{
+    margin-right: 0px;
 }
 
 /* MAIN-SLIDER-END */
@@ -513,6 +519,8 @@ input.check-toggle-round-flat:checked + label:after {
 /*        padding: 0px;*/
 /*    }*/
 /*}*/
+
+/* Tablet */
 @media (min-width: 768px) and (max-width: 1024px){
     .site-on-update_title h1{
         font-size: 64px;
@@ -532,7 +540,7 @@ input.check-toggle-round-flat:checked + label:after {
 }
 
 
-/* Tablet */
+/* Mobile */
 @media (max-width: 767px) {
     /*.container{*/
     /*    max-width: 678px!important;*/
@@ -602,7 +610,7 @@ input.check-toggle-round-flat:checked + label:after {
     }
 }
 
-/* Mobile */
+/* Extra-Small-Mobile */
 @media (max-width: 320px) {
     /*.container{*/
     /*    max-width: 330px!important;*/

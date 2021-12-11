@@ -4,6 +4,9 @@ new Swiper('.main-slider', {
         prevEl: '.slider-btn-prev',
     },
     effect: 'fade',
+    // autoplay: {
+    //     delay: 5000,
+    // },
     allowTouchMove: false,
     loop: true,
 });
