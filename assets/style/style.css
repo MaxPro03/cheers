@@ -13,6 +13,12 @@ body{
 
     /* TEXT-COLOR */
     --btn-text-color: #101010;
+    --text-green: #36954F;
+
+    /* SVG-COLOR */
+    --svg-green: #36954F;
+    --svg-black: #101010;
+    --svg-white: #101010;
 }
 
 h1,
@@ -46,6 +52,34 @@ li{
 ul{
     margin: 0;
     padding: 0;
+}
+
+.svg-green{
+    fill: var(--svg-green);
+}
+
+.svg-white{
+    fill: var(--svg-white);
+}
+
+.svg-black{
+    fill: var(--svg-black);
+}
+
+.path-green{
+    stroke: var(--svg-green);
+}
+
+.path-white{
+    stroke: var(--svg-white)!important;
+}
+
+.path-black{
+    stroke: var(--svg-black);
+}
+
+.text-green{
+    color: var(--text-green);
 }
 
 .link-btn{
@@ -107,6 +141,10 @@ ul{
     display: flex;
     align-items: flex-start;
     text-align: center;
+}
+
+.main-wrapper{
+    background: #FFFFFF;
 }
 
 /* HEADER */
@@ -333,28 +371,7 @@ input.check-toggle-round-flat:checked + label:after {
     filter: blur(4px);
 }
 
-/* #contactsModal .modal-body{
-    text-align: center;
-    padding: 73px 50px 53px 50px;
-    font-size: 24px;
-}
-
-#contactsModal .modal-content{
-    border-radius: 14px;
-    border: none;
-    margin-right: 30px;
-}
-
-#contactsModal .modal-content:last-child{
-    border-radius: 14px;
-    border: none;
-    margin-right: 0px;
-} */
-
 .site-on-update{
-    /*padding-top: 221px;*/
-    /*padding-bottom: 279px;*/
-    /*height: 100vh;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -401,6 +418,9 @@ input.check-toggle-round-flat:checked + label:after {
 .halal-product-img{
     margin-right: 12px;
 }
+
+
+
 /* SITE-ON-UPDATE-END */
 
 /* MAIN-SLIDER */
@@ -446,10 +466,10 @@ input.check-toggle-round-flat:checked + label:after {
 
 .main-slider-text{
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 8.5%;
     z-index: 2;
-    margin-top: 153px;
+    transform: translateY(-50%);
 }
 
 .main-slider-title h1{
@@ -467,11 +487,12 @@ input.check-toggle-round-flat:checked + label:after {
     fill: #FFFFFF;
 }
 
-.swiper-slide img{
+.main-slider .swiper-slide img{
     position: absolute;
-    bottom: 0;
+    top: 50%;
     right: 0;
     z-index: 2;
+    transform: translateY(-50%);
 }
 
 .main-slider-links{
@@ -485,6 +506,21 @@ input.check-toggle-round-flat:checked + label:after {
 
 .main-slider-links .link-btn:last-child{
     margin-right: 0px;
+}
+
+.main-slider .halal-product{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.main-slider .halal-product-img{
+    margin-right: 0;
+    margin-bottom: 8px;
 }
 
 /* MAIN-SLIDER-END */
@@ -522,6 +558,64 @@ input.check-toggle-round-flat:checked + label:after {
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px){
+    /* Main-Slider */
+    .main-slider{
+        height: 928px;
+    }
+
+    .main-slider .swiper-slide img{
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        z-index: 2;
+        height: 400px;
+        transform: translate(50%, -100%);
+    }
+
+    .main-slider-text{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, 0%);
+        margin-top: 35px;
+    }
+
+    .main-slider-title h1{
+        font-size: 64px;
+        line-height: 79.2px;
+        white-space: nowrap;
+        color: #101010;
+        text-align: center;
+    }
+
+    .main-slider-links{
+        margin-top: 36px;
+        justify-content: center;
+    }
+
+    .main-slider-links .link-btn{
+        margin-right: 0;
+    }
+
+    .main-slider-links .link-btn:last-child{
+        display: none;
+    }
+
+    .slider-btn-next{
+        right: 46px;
+    }
+
+    .slider-btn-prev{
+        left: 46px;
+    }
+
+    .main-slider .halal-product{
+        display: none;
+    }
+
+    /* Main-Slider-End */
+
     .site-on-update_title h1{
         font-size: 64px;
     }
@@ -546,6 +640,84 @@ input.check-toggle-round-flat:checked + label:after {
     /*    max-width: 678px!important;*/
     /*    padding: 0px;*/
     /*}*/
+
+    header{
+        height: 72px;
+    }
+
+    .header-logo a svg{
+        width: 65px;
+        height: 48px;
+    }
+
+    /* Main-Slider */
+    .main-slider{
+        height: 100vh;
+    }
+
+    .main-slider .swiper-slide img{
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        z-index: 2;
+        height: 400px;
+        transform: translate(50%, -100%);
+    }
+
+    .main-slider-text{
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, 0%);
+        margin-top: 35px;
+        width: 100%;
+        padding: 0px 16px;
+    }
+
+    .main-slider-title h1{
+        font-size: 32px;
+        line-height: 35.2px;
+        white-space: nowrap;
+        color: #101010;
+        text-align: center;
+    }
+
+    .main-slider-title h1 svg{
+        width: 25px;
+        height: 25px;
+    }
+
+    .main-slider-links{
+        margin-top: 36px;
+        justify-content: center;
+    }
+
+    .main-slider-links .link-btn{
+        margin-right: 0;
+        width: 328px;
+    }
+
+    .main-slider-links .link-btn:last-child{
+        display: none;
+    }
+
+    .slider-btn-next{
+        top: 45%;
+        right: 15px;
+    }
+
+    .slider-btn-prev{
+        top: 45%;
+        left: 15px;
+    }
+
+    .main-slider .halal-product{
+        display: none;
+    }
+
+    /* Main-Slider-End */
+    
 
     .info-cards__item{
         height: 250px;
@@ -579,8 +751,8 @@ input.check-toggle-round-flat:checked + label:after {
     }
 
     .text-on-text{
-        font-size: 22px;
-        padding: 11px 18px 10px;
+        font-size: 18px;
+        padding: 6px 16px 4px;
         line-height: 22px;
     }
 
