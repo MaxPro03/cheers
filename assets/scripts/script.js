@@ -16,14 +16,29 @@ new Swiper('.products-slider', {
         nextEl: '.product-btn-next',
         prevEl: '.product-btn-prev',
     },
-    slidesPerView: 6,
-    freeMode: true,
+    slidesPerView: "auto",
     spaceBetween: 30,
     // slidesPerView: "auto",
     // centeredSlides: true,
     allowTouchMove: false,
     loop: true,
     watchOverflow: true,
+    breakpoints: {
+        1025:{
+            slideToClickedSlide: false,
+            // freeMode: false,
+            // allowTouchMove: false,
+        },
+        1024:{
+            slideToClickedSlide: true,
+            // freeMode: true,
+            // allowTouchMove: true
+        },
+        767: {
+            slideToClickedSlide: false,
+            spaceBetween: 24
+        },
+    }
 });
 
 // Burger Menu
