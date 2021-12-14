@@ -17,27 +17,34 @@ new Swiper('.products-slider', {
         prevEl: '.product-btn-prev',
     },
     slidesPerView: "auto",
-    spaceBetween: 30,
-    // slidesPerView: "auto",
-    // centeredSlides: true,
-    allowTouchMove: false,
     loop: true,
-    watchOverflow: true,
+    spaceBetween: 30,
     breakpoints: {
-        1025:{
-            slideToClickedSlide: false,
-            // freeMode: false,
-            // allowTouchMove: false,
+        // when window width is >= 320px
+        // 320: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20
+        // },
+        // // when window width is >= 480px
+        // 480: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 30
+        // },
+        // // when window width is >= 640px
+        // 640: {
+        //     slidesPerView: 4,
+        //     spaceBetween: 40
+        // },
+        320:{
+            slidesPerView: "auto",
+            spaceBetween: 25,
+            touchRatio: 0.5
         },
-        1024:{
-            slideToClickedSlide: true,
-            // freeMode: true,
-            // allowTouchMove: true
-        },
-        767: {
-            slideToClickedSlide: false,
-            spaceBetween: 24
-        },
+        768:{
+            slidesPerView: "auto",
+            spaceBetween: 30,
+            touchRatio: 0.5
+        }
     }
 });
 
@@ -51,3 +58,12 @@ if (iconMenu) {
         headerNav.classList.toggle('active');
     });
 }
+
+/* add a class to <html> */
+var isTouch = 'ontouchstart' in window;
+document.documentElement.className += isTouch?' touch ':' no-touch ';
+
+
+$("#mainVideo").on('hidden.bs.modal', function (e) {
+    $("#mainVideo iframe").attr("src", $("#mainVideo iframe").attr("src"));
+});
