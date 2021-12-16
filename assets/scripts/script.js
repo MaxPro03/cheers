@@ -63,7 +63,11 @@ if (iconMenu) {
 var isTouch = 'ontouchstart' in window;
 document.documentElement.className += isTouch?' touch ':' no-touch ';
 
-
+// Main-Video
 $("#mainVideo").on('hidden.bs.modal', function (e) {
     $("#mainVideo iframe").attr("src", $("#mainVideo iframe").attr("src"));
 });
+
+$('.swiper-slide').on('mouseover', function() {
+    slidercontent.slideTo($(this).index());
+})
