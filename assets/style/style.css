@@ -2079,6 +2079,18 @@ input.check-toggle-round-flat:checked + label:after {
         padding-right: 0px;
     }
 
+    .products-tabs__item{
+        white-space: nowrap;
+    }
+
+    .products-tabs .nav {
+        justify-content: flex-start;
+        margin-bottom: 36px;
+        overflow: auto;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
     /* Products-End */
 }
 
