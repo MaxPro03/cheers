@@ -11,11 +11,17 @@ new Swiper('.main-slider', {
     loop: true,
 });
 
-new Swiper('.products-slider', {
+
+
+var swiper = new Swiper('.products-slider', {
     navigation: {
         nextEl: '.product-btn-next',
         prevEl: '.product-btn-prev',
     },
+	 // Disable preloading of all images
+    preloadImages: false,
+    // Enable lazy loading
+    lazy: true,
     slidesPerView: "auto",
     loop: true,
     spaceBetween: 30,
@@ -48,6 +54,7 @@ new Swiper('.products-slider', {
     }
 });
 
+
 // Burger Menu
 const iconMenu = document.querySelector('.burger-icon');
 if (iconMenu) {
@@ -67,7 +74,3 @@ document.documentElement.className += isTouch?' touch ':' no-touch ';
 $("#mainVideo").on('hidden.bs.modal', function (e) {
     $("#mainVideo iframe").attr("src", $("#mainVideo iframe").attr("src"));
 });
-
-$('.swiper-slide').on('mouseover', function() {
-    slidercontent.slideTo($(this).index());
-})
