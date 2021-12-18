@@ -1839,6 +1839,12 @@ input.check-toggle-round-flat:checked + label:after {
     /*    padding: 0px;*/
     /*}*/
 
+    .text-on-text{
+        font-size: 14px;
+        line-height: 14px;
+        padding: 6px 16px 8px;
+    }
+
     /* Small-Device-Btn */
 
     .small-device-btn{
