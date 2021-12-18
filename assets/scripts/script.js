@@ -74,3 +74,11 @@ document.documentElement.className += isTouch?' touch ':' no-touch ';
 $("#mainVideo").on('hidden.bs.modal', function (e) {
     $("#mainVideo iframe").attr("src", $("#mainVideo iframe").attr("src"));
 });
+
+// Accodrion Active Class
+const accordion = document.querySelector('.product-info .accordion');
+if (accordion) {
+    accordion.addEventListener("click", function (e) {
+        accordion.classList.toggle('active');
+    });
+}

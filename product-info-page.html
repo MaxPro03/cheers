@@ -123,56 +123,366 @@
     
         <main>
             <section>
-                <div class="product-info-wrapper">
+                <div class="product-info-wrapper bg-yellow">
                     <div class="container">
                         <div class="main-titles">
                             <span class="text-in-bg">сметана и зелень<span class="text-on-text text-white">сметана и зелень</span></span>
                         </div><!-- ./main-titles -->
                         <div class="product-info">
-                            <div class="col-lg-6">
+                            <div class="col-lg-6 col-12 order-lg-first order-last">
                                 <div class="product-info__img">
                                     <img src="./assets/images/big-zmet-luk.png" alt="">
                                 </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="product-info__variant">
-                                    <div class="col-lg-6">
-                                        <div class="product-weight">
-                                            <input class="product-weight-input" name="product-weight" id="small-weight" type="radio" checked>
-                                            <label class="product-weight-label" for="small-weight">
-                                                Маленькая — 30гр.
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="product-weight">
-                                            <input class="product-weight-input" name="product-weight" id="medium-weight" type="radio">
-                                            <label class="product-weight-label" for="medium-weight">
-                                                Средняя — 65гр.
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="product-weight">
-                                            <input class="product-weight-input" name="product-weight" id="big-weight" type="radio">
-                                            <label class="product-weight-label" for="big-weight">
-                                                Большая — 130гр.
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="product-weight">
-                                            <input class="product-weight-input" name="product-weight" id="oversize-weight" type="radio">
-                                            <label class="product-weight-label" for="oversize-weight">
-                                                Оверсайз — 210гр.
-                                            </label>
-                                        </div>
+                            </div><!-- ./col-lg-6 -->
+                            <div class="col-lg-6 col-12 order-lg-last order-first">
+                                <ul class="nav nav-pills" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="small-weight-tab" data-bs-toggle="pill" data-bs-target="#small-weight" type="button" role="tab" aria-controls="small-weight" aria-selected="true"><span class="product-weight-mobile">Маленькая —</span> 30 гр.</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="medium-weight-tab" data-bs-toggle="pill" data-bs-target="#medium-weight" type="button" role="tab" aria-controls="medium-weight" aria-selected="false"><span class="product-weight-mobile">Средняя —</span> 65 гр.</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="big-weight-tab" data-bs-toggle="pill" data-bs-target="#big-weight" type="button" role="tab" aria-controls="big-weight" aria-selected="false"><span class="product-weight-mobile">Большая —</span> 130 гр.</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="oversize-weight-tab" data-bs-toggle="pill" data-bs-target="#oversize-weight" type="button" role="tab" aria-controls="oversize-weight" aria-selected="false"><span class="product-weight-mobile">Оверсайз —</span> 210 гр.</button>
+                                    </li>
+                                </ul>
+                                <div class="product-info__slogan">
+                                    <p>
+                                        Проголодался? Неповторимый вкус запечённой картошечки в сочетании с ярким ароматом сыра — то, что нужно для поднятия настроения.  Возьми CHEERS со вкусом сыра с собой!	
+                                    </p>
+                                </div>
+                                <div class="accordion accordion-flush" id="productInfoStructure">
+                                    <div class="accordion-item">
+                                        <h2>
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProductInfoStructure" aria-expanded="false" aria-controls="collapseProductInfoStructure">
+                                                Состав
+                                            </button>
+                                        </h2>
+                                        <div id="collapseProductInfoStructure" class="accordion-collapse collapse" aria-labelledby="headerProductInfoStructure" data-bs-parent="#productInfoStructure">
+                                            <div class="accordion-body">
+                                                Картофельные хлопья, крахмал кукурузный, пшеничная мука, масло растительное (подсолнеч-ное), пищевая вкусоароматическая добавка «Сыр» [соль, сухая молочная сыворотка, мальтодекстрин,ароматизатор «Сыр», усилители вкуса и аромата (глутамат натрия 1-замещённый, 5’-рибонуклеотиды
+                                                натрия 2-замещённые, мальтол), декстроза, сыр сухой (сыр, эмульгатор орто-фосфат натрия 2-замещённый), регулятор кислотности (молочная кислота), краситель (экстракт паприки), антислеживатель (диоксид кремния)], сахар, разрыхлитель гидрокарбонат натрия), пищевой эмульгатор (соевый лецитин), антиокислители (токоферолы, лимонная кислота). Продукт может содержать незначительное количество сельдерея"                                        
+                                            </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div><!-- ./col-lg-6 -->
+                        </div><!-- ./product-info -->
                     </div><!-- ./container -->
                 </div><!-- ./product-info-wrapper -->
+                <div class="product-info-composition bg-white">
+                    <div class="container">
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="small-weight" role="tabpanel" aria-labelledby="small-weight-tab">
+                                <div class="product-info-composition__container">
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Белки
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            7,2 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            5,5%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Жиры
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            20,8 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            16%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Углеводы
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            87,1 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            67%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Соль
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            2,0 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            1,5%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-2">
+                                        <div class="product-info-composition__item__title">
+                                            Энергетическая ценность
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            440ккал 
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            1830 кДж
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                </div><!-- ./product-info-composition__wrapper -->
+                            </div><!-- ./tab-pane -->
+                            <div class="tab-pane fade" id="medium-weight" role="tabpanel" aria-labelledby="medium-weight-tab">
+                                <div class="product-info-composition__container">
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Белки
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            3 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            5,5%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Жиры
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            2 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            16%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Углеводы
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            1 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            67%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Соль
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            6 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            0%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-2">
+                                        <div class="product-info-composition__item__title">
+                                            Энергетическая ценность
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            1440ккал 
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            2 кДж
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                </div><!-- ./product-info-composition__wrapper -->
+                            </div>
+                            <div class="tab-pane fade" id="big-weight" role="tabpanel" aria-labelledby="big-weight-tab">
+                                <div class="product-info-composition__container">
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Белки
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            7,2 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            5,5%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Жиры
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            200 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            16%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Углеводы
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            680 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            67%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Соль
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            2,0 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            22%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-2">
+                                        <div class="product-info-composition__item__title">
+                                            Энергетическая ценность
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            40ккал 
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            8000 кДж
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                </div><!-- ./product-info-composition__wrapper -->
+                            </div>
+                            <div class="tab-pane fade" id="oversize-weight" role="tabpanel" aria-labelledby="oversize-weight-tab">
+                                <div class="product-info-composition__container">
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Белки
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            555 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            5,5%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Жиры
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            1 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            16%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Углеводы
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            8 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            10%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-1">
+                                        <div class="product-info-composition__item__title">
+                                            Соль
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            300 гр.
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            22%
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                    <div class="product-info-composition__item" id="grid-col-2">
+                                        <div class="product-info-composition__item__title">
+                                            Энергетическая ценность
+                                        </div><!-- ./product-info-composition__item__title -->
+                                        <div class="product-info-composition__item__quantity">
+                                            900ккал 
+                                        </div><!-- ./product-info-composition__item__quantity -->
+                                        <div class="product-info-composition__item__percent text-white">
+                                            3000 кДж
+                                        </div><!-- ./product-info-composition__item__percent -->
+                                        <div class="product-info-composition__item__definition">
+                                            Пищевая ценность
+                                        </div><!-- ./product-info-composition__item__definition -->
+                                    </div><!-- ./product-info-composition__item -->
+                                </div><!-- ./product-info-composition__wrapper -->
+                            </div>
+                        </div><!-- ./tab-content -->
+                        <div class="product-info-composition__link">
+                            <a href="products.html" class="link-btn bg-yellow">
+                                Вся продукция
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17 7L7 17" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 7H17V16" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>   
+                            </a>
+                        </div>
+                    </div><!-- ./container -->
+                </div><!-- ./product-info-composition -->
             </section>
         </main>
         <footer>
