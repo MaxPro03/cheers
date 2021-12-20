@@ -1396,6 +1396,40 @@ input.check-toggle-round-flat:checked + label:after {
 
 /* PRODUCT-PAGE-INFO-END */
 
+/* WHERE-TO-BUY */
+
+.where-to-buy__map{
+    position: relative;
+}
+
+.where-to-buy__map svg{
+    position: relative;
+    width: 100%;
+}
+
+.where-to-buy__map path{
+    transition: .2s;
+    cursor: pointer;
+}
+
+.where-to-buy__map #tashkent{
+    position: relative;
+}
+
+.where-to-buy__map path:hover{
+    fill: var(--yellow-bg);
+    stroke: var(--green-bg);
+}
+
+.where-to-buy-loc{
+    clip-path: url(#tashkent);
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+/* WHERE-TO-BUY-END */
+
 /*@media (max-width: 1440px) {*/
 /*    .container{*/
 /*        max-width: 1110px!important;*/
