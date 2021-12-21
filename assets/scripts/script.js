@@ -82,3 +82,32 @@ if (accordion) {
         accordion.classList.toggle('active');
     });
 }
+
+// Lang Switch
+const langSwitch = document.querySelector('.switch');
+if (langSwitch) {
+    langSwitch.addEventListener("click", function (e) {
+      langSwitch.classList.toggle('active');
+    });
+}
+
+// VIDEO
+$("#video-item-modal-1").on('hidden.bs.modal', function (e) {
+    $("#video-item-modal-1 iframe").attr("src", $("#video-item-modal-1 iframe").attr("src"));
+});
+
+$("#video-item-modal-2").on('hidden.bs.modal', function (e) {
+    $("#video-item-modal-2 iframe").attr("src", $("#video-item-modal-2 iframe").attr("src"));
+});
+
+$("#video-item-modal-3").on('hidden.bs.modal', function (e) {
+    $("#video-item-modal-3 iframe").attr("src", $("#video-item-modal-3 iframe").attr("src"));
+});
+
+$("#video-item-modal-4").on('hidden.bs.modal', function (e) {
+    $("#video-item-modal-4 iframe").attr("src", $("#video-item-modal-4 iframe").attr("src"));
+});
+
+$("#video-item-modal-5").on('hidden.bs.modal', function (e) {
+    $("#video-item-modal-5 iframe").attr("src", $("#video-item-modal-5 iframe").attr("src"));
+});
