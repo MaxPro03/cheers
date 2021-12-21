@@ -1480,6 +1480,28 @@ header{
 
 /* PROMO-END */
 
+/* DISRTIBUTION */
+
+.distribution .table>thead{
+    background-color: var(--green-bg);
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 14px 14px 0px 0px;
+}
+
+.distribution .table-striped>tbody>tr:nth-of-type(odd){
+    --bs-table-accent-bg: #FFFFFF;
+    color: #101010;
+}
+
+.distribution .table-striped>tbody>tr:nth-of-type(even){
+    --bs-table-accent-bg: #F1EFFA;
+    color: #101010;
+}
+
+/* DISRTIBUTION-END */
+
 /*@media (max-width: 1440px) {*/
 /*    .container{*/
 /*        max-width: 1110px!important;*/
