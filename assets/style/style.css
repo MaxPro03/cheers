@@ -1523,10 +1523,15 @@ header{
     overflow: hidden;
     border-radius: 14px 14px 0px 0px;
     margin-bottom: 0;
-    position: relative;
 }
 
-.distribution .table:after{
+.table-wrapper{
+    background-color: var(--green-bg);
+    padding-bottom: 24px;
+    border-radius: 14px;
+}
+
+/* .distribution .table-container:after{
     position: absolute;
     z-index: 5;
     bottom: 0;
@@ -1538,7 +1543,9 @@ header{
     height: 24px;
     background-color: var(--green-bg);
     border-radius: 0px 0px 14px 14px;
-}
+    margin: 0px 10px;
+    overflow: hidden;
+} */
 
 .distribution tbody{
     font-weight: 500;
@@ -2354,14 +2361,11 @@ header{
         transform: translate(-50%, 0%);
         z-index: 5;
     }
-/* 
-    .switch{
-        position: absolute;
-        top: -18px;
-        right: 0px;
-        z-index: 5;
 
-    } */
+    .switch{
+        margin-left: auto;
+
+    }
 
     .header-nav.active .mobile-social{
         display: flex;
