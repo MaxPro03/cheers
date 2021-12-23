@@ -666,6 +666,37 @@
                 </div>
             </section>
         </main>
+        <!-- User Agreement Modal -->
+        <div class="modal fade" 
+            id="userAgreement"
+            data-bs-keyboard="true" 
+            tabindex="-1" 
+            aria-labelledby="userAgreementLabel" 
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title">Пользовательское соглашение</h5>
+                <a type="button" data-bs-dismiss="modal" aria-label="Close">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="#101010" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                        
+                </a>
+                </div>
+                <div class="modal-body">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur dolorem impedit officia et dolore minima quibusdam, magnam vero dolores est dicta culpa, at eius quod! At explicabo quos ab inventore.
+                Magnam mollitia, dignissimos deserunt eos unde optio at temporibus hic voluptates quaerat dolores iusto odit fugiat cupiditate fugit fuga earum a! Fuga eveniet earum nam exercitationem perferendis ipsam velit quibusdam.
+                Dolor sunt dolorum eligendi consectetur culpa, officiis possimus accusamus harum commodi distinctio, voluptatibus, aperiam in qui. Tempora, numquam voluptates esse odio quaerat saepe? Reiciendis ab consequatur natus incidunt atque dolor.
+                Maxime aspernatur debitis, totam laborum aut consequuntur, iste amet hic cupiditate, ipsum suscipit temporibus expedita tempora eaque laudantium! Quod numquam culpa eius consequuntur vitae laudantium consequatur et praesentium tempore voluptatem.
+                Tempora praesentium vitae tenetur amet nemo sit, quibusdam illo! Voluptate nihil similique magnam dignissimos veniam quos ullam inventore sequi ab provident hic exercitationem architecto, ipsum, reprehenderit repellendus laboriosam. Aliquid, harum.
+                </div>
+                <div class="modal-footer">
+
+                </div>
+            </div>
+            </div>
+        </div>
         <footer>
             <div class="footer">
                 <div class="container">
@@ -719,7 +750,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#!">
+                                <a href="#!" data-bs-toggle="modal" data-bs-target="#userAgreement">
                                     Пользовательское соглашение
                                 </a>
                             </li>

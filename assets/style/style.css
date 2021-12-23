@@ -1352,13 +1352,8 @@ header{
 
 /* WHERE-TO-BUY */
 
-.where-to-buy__map{
+/* .where-to-buy__map{
     position: relative;
-}
-
-.where-to-buy__map svg{
-    position: relative;
-    width: 100%;
 }
 
 .where-to-buy__map path{
@@ -1380,9 +1375,81 @@ header{
     position: absolute;
     top: 0;
     left: 50%;
+} */
+
+.where-to-buy__map svg{
+    position: relative;
+    width: 100%;
+    cursor: pointer;
 }
+  
+  .where-to-buy__map path:hover {
+    fill: var(--yellow-bg);
+    stroke: var(--green-bg);
+  }
+  
+  .info_panel {
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--green-bg);
+    width: 166px;
+    height: 46px;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    /* border: 1px solid #333; */
+    color: #FFFFFF;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+  
+  .info_panel::first-line {
+    font-weight: bold;
+  }
 
 /* WHERE-TO-BUY-END */
+
+/* USER-AGREEMENT-MODAL */
+
+#userAgreement .modal-footer,
+#userAgreement .modal-header{
+    border: none;
+}
+
+#userAgreement .modal-title{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#userAgreement .modal-content{
+    border: 1px solid #101010;
+    border-radius: 14px;
+    padding: 48px;
+}
+
+/* width */
+#userAgreement .modal-dialog-scrollable .modal-body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F1EFFA;
+  }
+  
+/* Track */
+#userAgreement .modal-dialog-scrollable .modal-body::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Handle */
+#userAgreement .modal-dialog-scrollable .modal-body::-webkit-scrollbar-thumb {
+    background: var(--green-bg);
+    border-radius: 8px;
+}
+
+/* USER-AGREEMENT-MODAL-END */
 
 /* CONTACTS */
 
