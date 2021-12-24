@@ -1402,14 +1402,27 @@ header{
     font-size: 12px;
     font-family: Helvetica, Arial, sans-serif;
     position: absolute;
-    /* border: 1px solid #333; */
+    z-index: 2;
+    border: 1px solid #FFFFFF;
     color: #FFFFFF;
     white-space: nowrap;
     border-radius: 8px;
   }
-  
-  .info_panel::first-line {
-    font-weight: bold;
+
+  .info_panel:after{
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top: 6px solid var(--green-bg);
+  }
+
+  .distribution tbody tr.active{
+      background-color: var(--yellow-bg)!important;
   }
 
 /* WHERE-TO-BUY-END */
@@ -1567,21 +1580,21 @@ header{
     line-height: 15px;
 }
 
-.distribution .table-striped>tbody>tr:nth-of-type(odd){
-    --bs-table-accent-bg: #FFFFFF;
+.distribution tbody tr:nth-of-type(odd){
+    background-color: #FFFFFF;
     color: #101010;
 }
 
-.distribution .table-striped>tbody>tr:nth-of-type(even){
-    --bs-table-accent-bg: #F1EFFA;
+.distribution tbody tr:nth-of-type(even){
+    background-color: #F1EFFA;
     color: #101010;
 }
 
-.distribution .table-striped>tbody>tr{
+.distribution tbody tr{
     line-height: 18px;
 }
 
-.distribution .table-striped>tbody>tr:hover{
+.distribution tbody tr:hover{
     --bs-table-accent-bg: var(--yellow-bg);
 }
 

@@ -186,30 +186,94 @@ $(function() {
     for(i = 0; i < regions.length; i++) {
 
         $('#'+ regions[i].region_code)
-        .css({'fill': '#999999' + regions[i].population/highest_value +')'})
         .data('region', regions[i]);
     }
 
-    $('.where-to-buy__map path').click(function (e) {
+    $('.where-to-buy__map path').mouseover(function (e) {
         var region_data=$(this).data('region');
         $('<div class="info_panel">'+
             region_data.region_name +
           	'</div>'
          )
         .appendTo('body');
-        
     })
-    // $('body').click(function() {
-    //     $('.info_panel').remove()
-    // })
-    .click(function(e) {
+    .mouseleave(function () {
+        $('.info_panel').remove();
+    })
+    .mousemove(function(e) {
         var mouseX = e.pageX, //X coordinates of mouse
             mouseY = e.pageY; //Y coordinates of mouse
+
         $('.info_panel').css({
-            top: mouseY-70,
+            top: mouseY-60,
             left: mouseX - ($('.info_panel').width()/2)
         });
     });
 
-
 });
+
+
+//   $('#tashkent').on('click', function () {
+//     window.location.href.split('#').pop() = "distribution.html#tashkent1";
+//     var activespan = addClass('active');
+//     $(activespan).parents('#tashkent1').addClass('active')
+// });
+
+
+// $('#tashkent').click(function() {
+//     $('#tashkent1').addClass("currunt");
+//     localStorage.setItem('active', $('#tashkent1').parent().index());
+//   });
+  
+//   var ele = localStorage.getItem('active');
+//   $('#tashkent1 (' + ele + ')').addClass('currunt');
+
+//   $('.where-to-buy__map path#tashkent').click(function() {
+//     $('.table tr#tashkent1').each(function() {
+//       var isActive = this.pathname === location.pathname;
+//       $(this).parent().addClass('active', isActive);
+//     });
+//   });
+
+//   $('.where-to-buy__map path#tashkent').click(function(){
+//     var current = location.pathname;
+//     $('a#tashkent1').each(function(){
+//         var $this = $(this);
+//         // if the current path is like this link, make it active
+//         if($this.attr('href').indexOf(current) !== -1){
+//             $this.addClass('active');
+//         }
+//     })
+// })
+
+// jQuery(function($) {
+//     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
+//       $("#tashkent1").each(function(){
+//       if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
+//       $(this).addClass("active");
+//       $(this).parent("tr").addClass("active");
+//     })
+// });
+
+// if(location.hash == "#Who-We-Are"){
+//     $('html, body').animate({
+//     scrollTop: $(".map-section").offset().top
+// }, 1000);
+
+
+// $('#tashkent').click(function () {
+//    if(location.hash == "#tashkent1"){
+//     $('html, body').animate({
+//     scrollTop: $("#tashkent1").offset().top.addClass('active')
+//   }, 1000);
+//  }
+//  $("#tashkent1").addClass('active')
+// });
+  
+    // $("#tashkent").click(function(){
+    //     $("#test").addClass("page-header");
+    // });
+
+    $('#tashkent1').on('click', function () {
+        window.location = "C:/Users/user/Desktop/Cheers/distribution.html#test";
+    });
