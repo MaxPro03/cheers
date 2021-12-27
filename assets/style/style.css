@@ -294,25 +294,28 @@ header{
     height: 100%;
     width: 100%;
     font-weight: 500;
-    font-size: 14px;  
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.switch.active .langSwitchUz{
+.switch.active .langSwitchuz{
     background-color: #FFF212;
     color: #101010; 
 }
 
-.switch.active .langSwitchRu{
+.switch.active .langSwitchru{
     color: #FFFFFF;
     background-color: #55A66A;
 }
 
-.switch .langSwitchRu{ 
+.switch .langSwitchru{
     background-color: #FFF212;
     color: #101010;
 }
 
-.switch .langSwitchUz{
+.switch .langSwitchuz{
     color: #FFFFFF;
     background-color: #55A66A;
 }
@@ -1352,8 +1355,13 @@ header{
 
 /* WHERE-TO-BUY */
 
-/* .where-to-buy__map{
+.where-to-buy__map{
     position: relative;
+}
+
+.where-to-buy__map svg{
+    position: relative;
+    width: 100%;
 }
 
 .where-to-buy__map path{
@@ -1375,20 +1383,20 @@ header{
     position: absolute;
     top: 0;
     left: 50%;
-} */
+}
 
 .where-to-buy__map svg{
     position: relative;
     width: 100%;
     cursor: pointer;
 }
-  
-  .where-to-buy__map path:hover {
+
+.where-to-buy__map path:hover {
     fill: var(--yellow-bg);
     stroke: var(--green-bg);
-  }
-  
-  .info_panel {
+}
+
+.info_panel {
     font-weight: 500;
     font-size: 14px;
     display: flex;
@@ -1407,9 +1415,9 @@ header{
     color: #FFFFFF;
     white-space: nowrap;
     border-radius: 8px;
-  }
+}
 
-  .info_panel:after{
+.info_panel:after{
     display: block;
     content: "";
     position: absolute;
@@ -1419,13 +1427,44 @@ header{
     transform: translateX(-50%);
     border: 6px solid transparent;
     border-top: 6px solid var(--green-bg);
-  }
+}
 
-  .distribution tbody tr.active{
-      background-color: var(--yellow-bg)!important;
-  }
+.distribution tbody tr.active{
+    background-color: var(--yellow-bg)!important;
+}
+
+/* where-to-buy-map */
+
+.where-to-buy-mag__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.where-to-buy-mag__container a{
+    margin-right: 30px;
+}
+
+.where-to-buy-mag__container a:last-child{
+    margin-right: 0px;
+}
+
+.where-to-buy-mag__item{
+    width: 160px;
+    height: 160px;
+    background-color: #F1EFFA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 14px;
+}
+
+/* where-to-buy-map-end */
 
 /* WHERE-TO-BUY-END */
+
 
 /* USER-AGREEMENT-MODAL */
 
@@ -1449,8 +1488,8 @@ header{
 #userAgreement .modal-dialog-scrollable .modal-body::-webkit-scrollbar {
     width: 8px;
     background-color: #F1EFFA;
-  }
-  
+}
+
 /* Track */
 #userAgreement .modal-dialog-scrollable .modal-body::-webkit-scrollbar-button {
     display: none;
@@ -1463,6 +1502,7 @@ header{
 }
 
 /* USER-AGREEMENT-MODAL-END */
+
 
 /* CONTACTS */
 
@@ -1580,21 +1620,21 @@ header{
     line-height: 15px;
 }
 
-.distribution tbody tr:nth-of-type(odd){
-    background-color: #FFFFFF;
+.distribution .table-striped>tbody>tr:nth-of-type(odd){
+    --bs-table-accent-bg: #FFFFFF;
     color: #101010;
 }
 
-.distribution tbody tr:nth-of-type(even){
-    background-color: #F1EFFA;
+.distribution .table-striped>tbody>tr:nth-of-type(even){
+    --bs-table-accent-bg: #F1EFFA;
     color: #101010;
 }
 
-.distribution tbody tr{
+.distribution .table-striped>tbody>tr{
     line-height: 18px;
 }
 
-.distribution tbody tr:hover{
+.distribution .table-striped>tbody>tr:hover{
     --bs-table-accent-bg: var(--yellow-bg);
 }
 
@@ -1647,6 +1687,8 @@ header{
 
 /* DISRTIBUTION-END */
 
+
+
 @media (min-width: 1440px) {
     .table-container{
         max-width: 1320px;
@@ -1682,6 +1724,47 @@ header{
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1024px){
+    /* where-to-buy-map */
+
+    .where-to-buy__map svg{
+        height: 442px;
+    }
+
+    .where-to-buy-mag__container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 90px;
+    }
+
+    .where-to-buy-mag__container a{
+        width: calc((100% / 4) - (30px / 2));
+        margin-right: auto;
+        margin-bottom: 30px;
+    }
+
+    .where-to-buy-mag__container a:nth-child(4){
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .where-to-buy-mag__item{
+        width: 100%;
+        height: 147px;
+        background-color: #F1EFFA;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 14px;
+    }
+
+    /* where-to-buy-map-end */
+
+    #userAgreement .modal-content{
+        padding: 36px;
+    }
+
     .table-container{
         max-width: none;
         width: 100%;
@@ -2218,6 +2301,62 @@ header{
 
 /* Mobile */
 @media (max-width: 767px) {
+
+    #userAgreement .modal-dialog-centered{
+        margin-top: 70px;
+        min-height: calc(100% - 5rem);
+        height: calc(100% - 5rem);
+    }
+
+    #userAgreement .modal-content{
+        padding: 16px;
+    }
+
+    #userAgreement .modal-content{
+        padding: 16px;
+    }
+
+    #userAgreement .modal-body{
+        padding: 0px 12px 0px 0px;
+    }
+
+    #userAgreement .modal-body p{
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    #userAgreement .modal-header{
+        padding: 0px 0px 18px 0px;
+    }
+
+    #userAgreement .modal-header h5{
+        font-size: 16px;
+    }
+
+    /* where-to-buy */
+
+    .where-to-buy__map svg{
+        height: 300px;
+    }
+
+    .where-to-buy-mag__container a{
+        width: calc((100% / 2) - (28px / 2));
+        margin-right: auto;
+        margin-bottom: 28px;
+    }
+
+    .where-to-buy-mag__container a:nth-child(2){
+        margin-right: 0;
+    }
+
+    .where-to-buy-mag__container a:nth-child(4){
+        margin-right: 0;
+    }
+
+    .where-to-buy-mag__item{
+        width: 100%;
+        height: 152px;
+    }
     
     /* DISRTIBUTION */
 
@@ -2436,9 +2575,9 @@ header{
 
     .header-logo{
         position: absolute;
-        top: -22px;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%, 0%);
+        transform: translate(-50%, -50%);
         z-index: 5;
     }
 
