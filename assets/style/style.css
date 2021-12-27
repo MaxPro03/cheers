@@ -499,6 +499,7 @@ header{
     line-height: 79.2px;
     white-space: nowrap;
     color: #101010;
+    letter-spacing: 1px;
 }
 
 .main-slider-title h1 svg path{
