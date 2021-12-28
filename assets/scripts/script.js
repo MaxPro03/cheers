@@ -212,68 +212,6 @@ $(function() {
 
 });
 
-
-//   $('#tashkent').on('click', function () {
-//     window.location.href.split('#').pop() = "distribution.html#tashkent1";
-//     var activespan = addClass('active');
-//     $(activespan).parents('#tashkent1').addClass('active')
-// });
-
-
-// $('#tashkent').click(function() {
-//     $('#tashkent1').addClass("currunt");
-//     localStorage.setItem('active', $('#tashkent1').parent().index());
-//   });
-  
-//   var ele = localStorage.getItem('active');
-//   $('#tashkent1 (' + ele + ')').addClass('currunt');
-
-//   $('.where-to-buy__map path#tashkent').click(function() {
-//     $('.table tr#tashkent1').each(function() {
-//       var isActive = this.pathname === location.pathname;
-//       $(this).parent().addClass('active', isActive);
-//     });
-//   });
-
-//   $('.where-to-buy__map path#tashkent').click(function(){
-//     var current = location.pathname;
-//     $('a#tashkent1').each(function(){
-//         var $this = $(this);
-//         // if the current path is like this link, make it active
-//         if($this.attr('href').indexOf(current) !== -1){
-//             $this.addClass('active');
-//         }
-//     })
-// })
-
-// jQuery(function($) {
-//     var pgurl = window.location.href.substr(window.location.href.lastIndexOf("/")+1);
-//       $("#tashkent1").each(function(){
-//       if($(this).attr("href") == pgurl || $(this).attr("href") == '' )
-//       $(this).addClass("active");
-//       $(this).parent("tr").addClass("active");
-//     })
-// });
-
-// if(location.hash == "#Who-We-Are"){
-//     $('html, body').animate({
-//     scrollTop: $(".map-section").offset().top
-// }, 1000);
-
-
-// $('#tashkent').click(function () {
-//    if(location.hash == "#tashkent1"){
-//     $('html, body').animate({
-//     scrollTop: $("#tashkent1").offset().top.addClass('active')
-//   }, 1000);
-//  }
-//  $("#tashkent1").addClass('active')
-// });
-  
-    // $("#tashkent").click(function(){
-    //     $("#test").addClass("page-header");
-    // });
-
     $('#tashkent1').on('click', function () {
         window.location = "C:/Users/user/Desktop/Cheers/distribution.html#test";
     });
